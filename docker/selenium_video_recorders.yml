@@ -1,0 +1,28 @@
+# To execute this docker-compose yml file use `docker-compose -f selenium_grid.yml up`
+# Add the `-d` flag at the end for detached execution
+# To stop the execution, hit Ctrl+C, and then `docker-compose -f selenium_grid.yml down`
+version: "3"
+services:
+  chrome_video:
+    image: selenium/video:ffmpeg-4.3.1-20211105
+    volumes:
+      - C:\temp\videos:/videos
+    environment:
+      - DISPLAY_CONTAINER_NAME=chrome
+      - FILE_NAME=chrome_video.mp4
+
+  edge_video:
+    image: selenium/video:ffmpeg-4.3.1-20211105
+    volumes:
+      - C:\temp\videos:/videos
+    environment:
+      - DISPLAY_CONTAINER_NAME=edge
+      - FILE_NAME=edge_video.mp4
+
+  firefox_video:
+    image: selenium/video:ffmpeg-4.3.1-20211105
+    volumes:
+      - C:\temp\videos:/videos
+    environment:
+      - DISPLAY_CONTAINER_NAME=firefox
+      - FILE_NAME=firefox_video.mp4
