@@ -1,0 +1,5 @@
+{
+    "get_host" : "http://api.zippopotam.us/us/",
+    "post_host" : "https://httpbin.org/post",
+    "duckduckgo_url" : "https://www.duckduckgo.com"
+}

@@ -1,6 +1,6 @@
-## Welcome to N Automation Project!
+## Welcome to Backoffice Automation Project!
 
-Hi! My name is Federico Marilungo, if you need something you can find me in Slack
+Hi! My name is Federico Marilungo
 
 If you are new working with python, pipenv, pytest or selenium, 
 I would recommend you follow this course 
@@ -8,31 +8,52 @@ https://testautomationu.applitools.com/learningpaths.html?id=web-ui-python-path
 
 ## I dont have time! Give me the command!
 
+---
+
 run tests
 
 `pipenv run python -m pytest`
+
+---
+
+run specific test with logs
+
+`pipenv run python -m pytest -s ./tests/test_search.py::test_basic_duckduckgo_search`
+
+
+---
 
 run tests in parallel with report
 
 `pipenv run python -m pytest --html=./reports/report.html --self-contained-html -n 3`
 
-run tests remotely
 
-`docker-compose -f ./docker/selenium_grid.yml up`
+`pipenv run python -m pytest --junitxml=./reports/report.xml --self-contained-html -n 3`
 
-    then modify config.json, browser = 'Remote'
-    run like always!
+---
 
-to run tests remotely and then see videos, create this folder : 
+modify config.json, browser = 'Remote' and run!
+
+you can see tests running in remote machine :
+
+grid : http://35.227.34.60:4444/ui/index.html#/
+pass : secret
+
+---
+
+run tests remotely with video recording
+
+create this folder
 
 `C:\temp\videos`
 
-execute docker compose 
+execute selenium_video_recorders.yml (selenium_grid should have been executed)
 
 `docker-compose -f ./docker/selenium_video_recorders.yml up`
 
-then stop video recorders : 
+run tests and then stop video recorders
 
+---
 
 ## Python Setup
 

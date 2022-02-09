@@ -10,6 +10,7 @@ pytest = "*"
 selenium = "*"
 pytest-xdist = "*"
 pytest-html = "*"
+requests = "*"
 
 [requires]
 python_version = "3.9"

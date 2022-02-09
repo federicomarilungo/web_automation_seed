@@ -1,4 +1,4 @@
 {
-  "browser": "Remote",
+  "browser": "Chrome",
   "implicit_wait": 10
 }
